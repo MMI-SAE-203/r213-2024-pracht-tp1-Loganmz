@@ -7,7 +7,7 @@ const sectionOpen = ref(1)
 <template>
     <p>Onglet 1</p>
     <section>
-    <button class="text-xl" @pointerdown="/* change `sectionOpen` à 1 */">bouton 1</button>
-    <p v-show="sectionOpen">loren...</p>
+    <button class="text-xl" @pointerdown="sectionOpen = sectionOpen === 1 ? 0 : 1">bouton 1</button>
+    <p v-show="sectionOpen ===1">loren...</p>
   </section>
 </template>
