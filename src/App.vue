@@ -31,7 +31,7 @@ const menuIsOpen = ref(false)
   <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
   <Transition class="transition-transform duration-1000" enter-from-class="-translate-x-full"
     enter-to-class="translate-x-0" leave-active-class="-translate-x-full">
-    <nav id="mainNav" v-show="menuIsOpen" >
+    <nav id="mainNav" v-show="menuIsOpen" class="bg-sky-950 w-1/6 text-emerald-300 flex justify-center py-10">
       <ul>
         <li >
           <RouterLink to="/"> Accueil </RouterLink>
