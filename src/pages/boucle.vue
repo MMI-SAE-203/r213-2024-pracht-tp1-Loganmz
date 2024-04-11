@@ -28,12 +28,13 @@ const sectionsData = [
     quis corporis et nam.`
   }
 ]
+const sectionOpen = ref(50)
 </script>
 
 <template>
     <section v-for="({ label, texte }, key) of sectionsData" :key="key">
         <pre class="font-mono">key : {{ key }}</pre>
-        <pre class="font-mono">label : {{ label }}</pre>
-        <pre class="font-mono">texte : {{ texte }}</pre>
+        <pre @pointerdown="sectionOpen = sectionOpen === key ? 50 : key" class="font-mono">label : {{ label }}</pre>
+        <pre  v-show="sectionOpen === key" class="font-mono">texte : {{ texte }}</pre>
     </section>
 </template>
