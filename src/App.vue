@@ -25,12 +25,12 @@ const menuIsOpen = ref(false)
       </ul>
     </nav>
   </header>
-  <button aria-controls="mainNav" aria-expanded="true" class="rounded-full border-2 border-red-600 bg-red-300 px-2">
+  <button @pointerdown="menuIsOpen = !menuIsOpen" aria-controls="mainNav" aria-expanded="true" class="rounded-full border-2 border-red-600 bg-red-300 px-2">
     menu
   </button>
   <!-- nav#mainNav>ul>li*3>a[href="#"]{item $} -->
 
-    <nav id="mainNav" >
+    <nav id="mainNav" v-show="menuIsOpen" >
       <ul>
         <li >
           <RouterLink to="/"> Accueil </RouterLink>
